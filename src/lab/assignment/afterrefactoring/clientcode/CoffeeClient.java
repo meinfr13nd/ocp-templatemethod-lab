@@ -1,18 +1,20 @@
-package lab.assignment.beforerefactoring.clientcode;
+package lab.assignment.afterrefactoring.clientcode;
 
-import lab.assignment.beforerefactoring.CoffeeMaker;
+import lab.assignment.afterrefactoring.CoffeeMaker;
+import lab.assignment.afterrefactoring.MochaCoffee;
+import lab.assignment.afterrefactoring.CapuccinoCoffee;
 
 public class CoffeeClient {
 
 
     public static void main(String[] args) {
-        CoffeeMaker starbuzz = new CoffeeMaker();
-        starbuzz.prepareMochaCoffee();
+        CoffeeMaker starbuzz = new MochaCoffee();
+        starbuzz.prepareCoffee();
 
         System.out.println("********************");
 
-        starbuzz = new CoffeeMaker();
-        starbuzz.prepareCapuccinoCoffee();
+        starbuzz = new CapuccinoCoffee();
+        starbuzz.prepareCoffee();
 
     }
 

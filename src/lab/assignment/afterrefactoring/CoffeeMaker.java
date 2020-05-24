@@ -1,22 +1,18 @@
-package lab.assignment.beforerefactoring;
+package lab.assignment.afterrefactoring;
 
-public class CoffeeMaker {
+public abstract class CoffeeMaker {
 
-    public void prepareMochaCoffee(){
+    public void brewCoffee() {
         boilWater();
         brewEspresso();
-        addIngredientsForMocha();
-        finalTouchForMocha();
+        addIngredients();
+        finalTouch();
         System.out.println(">>Serving coffee");
     }
 
-    public void prepareCapuccinoCoffee(){
-        boilWater();
-        brewEspresso();
-        addIngredientsForCapuccino();
-        finalTouchForCapuccino();
-        System.out.println(">>Serving coffee");
-    }
+    protected abstract void addIngredients();
+
+    protected abstract void finalTouch();
 
     private void boilWater() {
         System.out.println("Boiling water");
@@ -26,23 +22,15 @@ public class CoffeeMaker {
         System.out.println("Brewing espresso");
     }
 
-    private void addIngredientsForMocha(){
+    //default for addIngredients
+    private void addIngredients() {
         System.out.println("Adding cocoa powder");
         System.out.println("Adding hot milk");
     }
 
-    private void addIngredientsForCapuccino(){
-        System.out.println("Add hot milk");
-        System.out.println("Add cinnamon");
-    }
-
-    private void finalTouchForMocha(){
+    //default for addIngredients
+    private void finalTouch() {
         System.out.println("Adding sugar");
     }
-
-    private void finalTouchForCapuccino(){
-        System.out.println("Top with milk foam");
-    }
-
 
 }

@@ -7,7 +7,7 @@ public class MochaCoffee {
         System.out.println("Adding hot milk");
     }
 
-    public void finalTouch(){
+    public void finalTouch() {
         System.out.println("Adding sugar");
     }
 }
